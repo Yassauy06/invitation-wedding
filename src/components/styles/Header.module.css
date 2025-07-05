@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Основной фон */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: var(--background, #fff);
+}
+
+/* === HEADER === */
+.header {
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* === ТЕКСТ В ГЕРОЙ-СЕКЦИИ === */
+.heroText {
+  color: black;
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+}
+
+.titleWrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.heroTextColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.name {
+  font-size: 128px;
+  font-weight: 700;
+  color: black;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.and {
+  font-size: 128px;
+  font-weight: 900;
+  color: #d63384;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.name,
+.and,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.invite {
+  text-align: center;
+  font-size: 28px;
+  color: black;
+  margin-top: 30px;
+  line-height: 1.5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eventInfo {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.dot {
+  color: #d63384;
+  font-size: 22px;
+}
+
+/* === BUTTON === */
+.button {
+  background-color: #d63384;
+  color: white;
+  padding: 14px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c2185b;
+  transform: scale(1.05);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 32px;
+
+  font-family: 'Times New Roman', Times, serif;
+  backdrop-filter: blur(6px);
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 26px;
+}
+
+.coupleName {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d63384;
+  white-space: nowrap;
+}
+
+.navRight {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navItem {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navItem:hover {
+  color: #d63384;
+}
+
+
+
+/* === MEDIA QUERIES === */
+@media (max-width: 1024px) {
+  .name,
+  .and {
+    font-size: 96px;
+  }
+
+  .invite {
+    font-size: 22px;
+  }
+
+  .eventInfo {
+    font-size: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .navItem {
+    font-size: 20px;
+  }
+
+  .coupleName {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .name,
+  .and {
+    font-size: 64px;
+  }
+
+  .invite {
+    font-size: 18px;
+  }
+
+  .eventInfo {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px;
+    align-items: flex-start;
+  }
+
+  .navRight {
+    margin-top: 10px;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .navItem {
+    font-size: 16px;
+  }
+
+  .coupleName {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+}
+
+@media (max-width: 480px) {
+  .name,
+  .and {
+    font-size: 48px;
+  }
+
+  .titleWrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .invite {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .eventInfo {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .logo,
+  .coupleName {
+    font-size: 16px;
+  }
+
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .navItem {
+    font-size: 16px;
+  }
+}

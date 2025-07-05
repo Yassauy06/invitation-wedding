@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'; // подключим стили
+import Header from './components/Header';
+import Program from './components/Program';
+import Calendar from './components/Calendar';
+import Footer from './components/Footer';
+import Story from './components/Story';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appContainer">
+      {/* Фоновое видео */}
+      <video
+        className="videoBackground"
+        src="/фон.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Содержимое поверх фона */}
+      <div className="contentOverlay">
+        <Header />
+<Story/>
+        <Program />
+        <Calendar />
+        {/* футер без фона */}
+        <div className="noBackground">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,119 @@
+.section {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  color: #d63384;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 40px;
+}
+
+.timelineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Левая и правая колонки */
+.leftColumn,
+.rightColumn {
+  width: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.leftColumn {
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.rightColumn {
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Отступы для определённых событий */
+.photo {
+  margin-top: 60px;
+}
+
+.banquet {
+  margin-top: 40px;
+}
+
+/* Вертикальная линия */
+.line {
+  width: 2px;
+  background: #d63384;
+  height: 360px;
+  position: relative;
+  top: 0;
+}
+
+/* Общий стиль событий */
+.event {
+  width: 280px; /* ← фиксированная ширина */
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+/* Исходное состояние */
+
+
+.time {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.eventTitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.location {
+  font-size: 16px;
+  color: #444;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .timelineContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo,
+  .banquet {
+    margin-top: 20px;
+  }
+}
